@@ -215,7 +215,8 @@ audio.addEventListener("ended", () => {
 //   setPlayerDisplay()
 //    highlightCurrentSong() 
 //     setPlayButtonAccessibleText()
-playSong(0)
+
+      playSong(userData?.songs[0].id)
 
     }
 });
