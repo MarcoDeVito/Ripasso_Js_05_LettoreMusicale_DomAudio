@@ -209,12 +209,13 @@ audio.addEventListener("ended", () => {
     if (nextSongExists) {
       playNextSong();
     } else {
-      userData.currentSong = null;
-      userData.songCurrentTime = 0;  
- pauseSong()
-  setPlayerDisplay()
-   highlightCurrentSong() 
-    setPlayButtonAccessibleText()
+//       userData.currentSong = null;
+//       userData.songCurrentTime = 0;  
+//  pauseSong()
+//   setPlayerDisplay()
+//    highlightCurrentSong() 
+//     setPlayButtonAccessibleText()
+playSong(0)
 
     }
 });
@@ -237,3 +238,4 @@ const sortSongs = () => {
 
 renderSongs(sortSongs());
 setPlayButtonAccessibleText();
+console.log(userData);
