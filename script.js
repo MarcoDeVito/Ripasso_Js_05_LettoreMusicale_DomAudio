@@ -11,21 +11,21 @@ const allSongs = [
     title: "Kompa pasiòn",
     artist: "frozy",
     duration: "2:27",
-    src: "./frozy.mp3",
+    src: "./resources/frozy.mp3",
   },
   {
     id: 1,
     title: "Stardust Memories",
     artist: "Jester",
     duration: "3:50",
-    src: "./jester.mp3",
+    src: "./resources/jester.mp3",
   },
   {
     id: 2,
     title: "Hanezeve Caradhina",
     artist: "Made in Abyss OST",
     duration: "2:00",
-    src: "./abyss.mp3",
+    src: "./resources/abyss.mp3",
   },
  
 ];
