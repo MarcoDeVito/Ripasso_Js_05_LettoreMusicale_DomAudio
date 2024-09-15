@@ -68,9 +68,12 @@ const playNextSong = () => {
     playSong(userData?.songs[0].id);
   } else {
     const currentSongIndex = getCurrentSongIndex();
+    
+    
     const nextSong = userData?.songs[currentSongIndex + 1];
+if((currentSongIndex + 1)>=userData?.songs.length)  playSong(userData?.songs[0].id);
+  else playSong(nextSong.id);
 
-    playSong(nextSong.id);
   }
 };
 
@@ -79,8 +82,11 @@ const playPreviousSong = () => {
    else {
     const currentSongIndex = getCurrentSongIndex();
     const previousSong = userData?.songs[currentSongIndex - 1];
+    
+    if((currentSongIndex - 1)<0)  playSong(userData?.songs[userData?.songs.length-1].id);
+  else playSong(previousSong.id);
 
-    playSong(previousSong.id);
+
    }
 };
 
