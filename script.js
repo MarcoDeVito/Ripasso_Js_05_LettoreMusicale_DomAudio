@@ -242,7 +242,25 @@ const sortSongs = () => {
 
   return userData?.songs;
 };
+if ('mediaSession' in navigator) {
+  navigator.mediaSession.metadata = new MediaMetadata({
+      title: userData?.currentSong?.title || 'Unknown',
+      artist: userData?.currentSong?.artist || 'Unknown',
+      
+  });
+
+  navigator.mediaSession.setActionHandler('play', () => {
+      if (userData?.currentSong === null) {
+          playSong(userData?.songs[0].id);
+      } else {
+          playSong(userData?.currentSong.id);
+      }
+  });
+  navigator.mediaSession.setActionHandler('pause', pauseSong);
+  navigator.mediaSession.setActionHandler('previoustrack', playPreviousSong);
+  navigator.mediaSession.setActionHandler('nexttrack', playNextSong);
+}
 
 renderSongs(sortSongs());
 setPlayButtonAccessibleText();
-console.log(userData);
+
